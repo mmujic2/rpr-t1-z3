@@ -23,7 +23,9 @@ public class Sat {
             sati = sati + 1;
         }
 
-        if (sati == 24) sati = 0;
+        if (sati == 24) {
+            sati = 0;
+        }
     }
 
     public void prethodni(){
@@ -38,14 +40,21 @@ public class Sat {
             sati = sati - 1;
         }
 
-        if (sati == -1) sati = 23;
+        if (sati == -1) {
+            sati = 23;
+        }
     }
 
     public void pomjeriZa(int pomak) {
         if (pomak > 0) {
-            for (int i = 0; i < pomak; i++) sljedeci();
-        } else {
-            for (int i = 0; i < -pomak; i++) prethodni();
+            for (int i = 0; i < pomak; i++) {
+                sljedeci();
+            }
+        }
+        else {
+            for (int i = 0; i < -pomak; i++) {
+                prethodni();
+            }
         }
     }
 
